@@ -1,38 +1,232 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
+
+body{
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+a{
+  color: #fff;
+  text-decoration: none !important;
+}
+.body{
+  background-color: black;
+  color: #fff;
+}
+.home-page{
+  background-color: black;
+}
+/* 하단 */
+.footer-box{
+  width: 100%;
+  height: 300px;
+  padding: 30px;
+  background-color: rgb(0, 0, 0);
+}
+.footer-top{
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-top li{
+  margin-right: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer-sns{
+  display: flex;
+}
+.footer-sns div{
+  margin-right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.bar{
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.loading{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  color: brown !important;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.nav-item{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-right: 20px;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.nav-item:hover{
+  color: rgb(231, 231, 231);
+  text-shadow: 3px 3px 5px rgb(186, 186, 186);
+}
+
+.genres{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.age-tag{
+  padding: 10px 0;
+}
+
+.detail-card{
+ position: relative;
+ height: 450px;
+}
+
+.overview{
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.ratings{
+  font-size: 18px;
+}
+
+.runtime{
+  padding: 10px 0;
+}
+.detail-top{
+  margin-bottom: 30px;
+}
+
+.trailer{
+  position: absolute;
+  bottom: 0;
+  color:  brown !important;
+}
+.trailer:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+.trailer-main{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.review-box{
+  padding: 10px;
+}
+.review-total{
+  border: 1px solid #fff;
+}
+
+.video-yt{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.review-tag{
+  width: 300px;
+  height: 40px;
+  border: 1px solid #fff;
+  background-color: brown;
+  color: #fff;
   text-align: center;
+  line-height: 38px;
+}
+.detail-text{
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.banner{
+  height: 600px; 
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner::before{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  content: '';
+  background: linear-gradient(to right, black, transparent); /*오른쪽으로 갈수록 검정색을 주고 서서히 투명해짐*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner-info{
+  width: 100%;
+  margin-left: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.main-detail{
+  width: 30%;
+  margin-left: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  z-index: 1;
+  color: #fff;
+  margin-top: 40px;
+}
+.banner-video{
+  margin-right: 20px;
+}
+
+.hot-movie{
+  font-size: 15px;
+  color: brown;
+}
+.movie-list{
+  padding: 20px;
+  color: brown;
+}
+
+.card{
+  width: 300px;
+  height: 200px !important;
+  transition: 0.3s;
+  cursor: pointer;
+  /* font-size: 100px; */
+}
+.overlay{
+  opacity: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 15px;
+  transition: 0.3s;
+}
+.overlay h1{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.card:hover{
+  scale: 1.3;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover .overlay{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.449);
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detail-box{
+  margin-top: 30px;
+}
+
+.detail-title{
+  font-size: 35px;
+  padding-bottom: 10px;
 }
