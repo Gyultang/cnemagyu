@@ -41,7 +41,7 @@ const Home = () => {
           <h1>Upcoming Movie</h1>
           <MovieSlide movies={upComingMovies}></MovieSlide>
         </div>
-        <div className='bar'></div>
+        
     </div>
   )
 }

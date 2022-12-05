@@ -7,6 +7,7 @@ import Movies from './pages/Movies';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer'
+import Search from './pages/Search';
 
 
 
@@ -33,7 +34,9 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/movies' element={<Movies></Movies>}></Route>
         <Route path='/movies/:id' element={<MovieDetail></MovieDetail>}></Route>
+        <Route path='/search' element={<Search></Search>}></Route>
       </Routes>
+      <div className='bar'></div>
       <Footer></Footer>
     </div>
   );

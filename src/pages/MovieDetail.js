@@ -7,6 +7,9 @@ import api from '../redux/api';
 import { Axios } from 'axios';
 import Reviews from '../components/Reviews'
 import Trailer from '../components/Trailer';
+import Casts from '../components/Casts';
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 
 
@@ -14,6 +17,8 @@ import Trailer from '../components/Trailer';
 
 const API_KEY=process.env.REACT_APP_API_KEY
 const MovieDetail = ({item}) => {
+  const dispatch=useDispatch()
+  const {loading,MovieDetail} = useSelector(state=>state.movie)
  
   const [movies,setMovies]=useState([])
   const {id} = useParams();
@@ -30,15 +35,19 @@ const MovieDetail = ({item}) => {
   }
 
  
-
   useEffect(()=>{
+    // dispatch(movieAction.getMovies())
     getMoviesDetail();
   },[])
-  // console.log("무비디테일",)
-
-
-  
-
+ 
+  if(loading){
+    return <div className='loading'><ClipLoader
+    color='red'
+    loading={loading}
+    size={300}
+    aria-label="Loading Spinner"
+  /></div>
+  }else{
 
 
   return (
@@ -61,18 +70,16 @@ const MovieDetail = ({item}) => {
                 <div>{movies?.release_date}</div>
                 <div className='runtime'>{movies?.runtime}분</div>
                 <Trailer id={id}></Trailer>
-               
             </div>
           </Col>
         </Row>
+        <Casts id={id}></Casts>
         <div>
           <Reviews id={id}></Reviews>
         </div>
-
       </Container>
-      <div className='bar'></div>
     </div>
-  )
+  )}
 }
 
 export default MovieDetail

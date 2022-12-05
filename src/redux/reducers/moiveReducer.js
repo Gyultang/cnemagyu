@@ -19,6 +19,7 @@ function movieReducer(state=initialState,action){
                 topRatedMovies: payload.topRatedMovies,
                 upComingMovies: payload.upComingMovies,
                 genreList:payload.genreList,
+                MovieDetail:payload.MovieDetail,
                 loading:false,
             };
         case 'GET_MOVIES_DETAIL_REQUEST':
