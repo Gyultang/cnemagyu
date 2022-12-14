@@ -7,7 +7,7 @@ import { useState,useEffect } from 'react';
 const API_KEY=process.env.REACT_APP_API_KEY
 const Banner = ({movie}) => {
 
-    console.log("무비아이디",movie.id)
+    // console.log("무비아이디",movie.id)
     const [mainVideo,setMainVideo]=useState([])
 
     const getMainVideo=async()=>{
@@ -24,7 +24,7 @@ const Banner = ({movie}) => {
   return (
     <div className='banner' style={{
         // 객체의 키값 뒤에오는 내용은 string타입으로 들어가야 한다
-        backgroundImage:"url("+`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie.poster_path}`+")",
+        backgroundImage:"url("+`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie?.poster_path}`+")",
         backgroundSize:'100%',
           }}>
         <div className='banner-info'>
@@ -41,7 +41,7 @@ const Banner = ({movie}) => {
                       {width: "560",
                       height: "315",
                       playerVars: {
-                        autoplay: 1, //자동재생 O
+                        autoplay: 0, //자동재생 O
                       },
                     }
                     }

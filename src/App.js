@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer'
 import Search from './pages/Search';
+import Login from './pages/Login';
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path='/movies' element={<Movies></Movies>}></Route>
         <Route path='/movies/:id' element={<MovieDetail></MovieDetail>}></Route>
         <Route path='/search' element={<Search></Search>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
       </Routes>
       <div className='bar'></div>
       <Footer></Footer>

@@ -29,14 +29,11 @@ const Navigation = () => {
           >
             <Link to='/movies' className='nav-item'>Movies</Link>
             <Link to='/search' className='nav-item'>Search</Link>
+            
          
             
           </Nav>
-          <div>
-            Search
-            {/* <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon> 
-            <input type='text' placeholder='Search' onKeyPress={(event)=>search(event)}></input> */}
-          </div>
+          <Link to='/login' className='nav-item'>Login</Link>
           {/* <Form className="d-flex">
             <Form.Control
               type="search"
