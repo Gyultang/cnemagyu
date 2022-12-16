@@ -25,7 +25,7 @@ const Banner = ({movie}) => {
     <div className='banner' style={{
         // 객체의 키값 뒤에오는 내용은 string타입으로 들어가야 한다
         backgroundImage:"url("+`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie?.poster_path}`+")",
-        backgroundSize:'100%',
+        backgroundSize:'100%',backgroundRepeat:'no-repeat',height:'100vh',
           }}>
         <div className='banner-info'>
             <div class='main-detail'>
@@ -41,7 +41,7 @@ const Banner = ({movie}) => {
                       {width: "560",
                       height: "315",
                       playerVars: {
-                        autoplay: 1, //자동재생=1 O
+                        autoplay: 0, //자동재생=1 O
                       },
                     }
                     }

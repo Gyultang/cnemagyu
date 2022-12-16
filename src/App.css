@@ -29,7 +29,7 @@ a{
 
 .footer-top li{
   margin-right: 8px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
 .footer-sns{
@@ -37,7 +37,7 @@ a{
 }
 .footer-sns div{
   margin-right: 15px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 .bar{
@@ -147,7 +147,7 @@ a{
 }
 
 .banner{
-  height: 600px; 
+  height: 100vh; 
   display: flex;
   align-items: center;
 }
@@ -156,7 +156,7 @@ a{
   position: absolute;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 100%;
   content: '';
   background: linear-gradient(to right, black, transparent); /*오른쪽으로 갈수록 검정색을 주고 서서히 투명해짐*/
 }
@@ -190,6 +190,9 @@ a{
   padding: 30px;
   color: brown;
 }
+.movie-list h1{
+  font-size: 35px;
+}
 
 .card{
   width: 300px;
@@ -204,17 +207,18 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 15px;
+  align-items: flex-end;
+  padding-right: 15px;
   transition: 0.3s;
   color: #fff;
 }
 .overlay h1{
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Barlow Condensed', sans-serif;
 }
 .card:hover{
-  scale: 1.3;
+  scale: 1.2;
 }
 
 .card:hover .overlay{
@@ -329,16 +333,38 @@ a{
 }
 
 .search-card{
-  width: 182px;
+  width: 190px;
   height: 280px;
   /* border: 1px solid #fff; */
   margin-right: 20px;
   margin-bottom: 20px;
   cursor: pointer;
 }
-.search-card:hover.search-card img{
-  outline: 5px solid brown;
+.search-card:hover .search-view-box{
+  outline: 4px solid brown;
+  opacity: 1;
 }
+
+.search-card-poster{
+  width: 180px;
+  height: 250px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.search-view-box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.753);
+  z-index: 3333333;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-card img{
   width: 180px;
   height: 250px;
