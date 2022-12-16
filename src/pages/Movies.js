@@ -33,6 +33,7 @@ const Movies = ({item}) => {
     let response = await api.get(url)
     let data = response.data;
     setMovieList(data)
+
     loading=false
     console.log("무비리스트",data)
     console.log("apiPage",data.page)
@@ -59,8 +60,14 @@ const getGenre = (genreId)=>{
   setGoGenre( Number(genreId))
   
   console.log("장르있?",typeof goGenre,goGenre)
-  console.log("장르별영화",)
 }
+
+const moviesByGenre = (genreId) => {
+  return movieList&&movieList.results.filter(({
+    genre_ids
+  }) => genre_ids.includes(genreId))
+}
+console.log("장르별영화",moviesByGenre(goGenre))
 
 
 
@@ -78,7 +85,7 @@ const getGenre = (genreId)=>{
       getMovieList()
       // handlePageChange()
       dispatch(movieAction.getMovies())
-    },[page]);
+    },[page,goGenre]);
 
    
     if(loading){
@@ -93,14 +100,14 @@ const getGenre = (genreId)=>{
   return (
     <div>
       <Container className='movie-list'>
-        <Dropdown>
+        {/* <Dropdown>
           <Dropdown.Toggle variant="outline-danger" id="dropdown-basic">
             GENRE
           </Dropdown.Toggle>
         <DropdownMenu>
           {genreList.map((gen)=><li className='genre-list'><a onClick={(e)=>getGenre(`${gen.id}`)}>{gen.name}</a></li>)}
           </DropdownMenu>
-        </Dropdown>
+        </Dropdown> */}
         <div></div>
         <Row>
             <div className='movie-list01'>

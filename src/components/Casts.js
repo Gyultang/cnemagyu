@@ -50,7 +50,7 @@ const Cast = ({item}) => {
         <h1>Character</h1>
         <Container>
           <Row>
-            <div style={{display:'flex'}}>{character.cast&&character.cast.length>0?character.cast.slice(0,7).map((item)=><CastCard item={item}></CastCard>):null}</div> 
+            <div className='cast-box-mobile' style={{display:'flex'}}>{character.cast&&character.cast.length>0?character.cast.slice(0,7).map((item)=><CastCard item={item}></CastCard>):null}</div> 
           </Row>  
          </Container>    
         {/* <Carousel responsive={responsive}>

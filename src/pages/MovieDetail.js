@@ -24,6 +24,15 @@ const MovieDetail = ({item}) => {
   const {id} = useParams();
   console.log("영화번호",id)
 
+  const [moviesGenre,setMoviesGenre]=useState(null)
+
+  const getAPI = async()=>{
+      const url = `/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`
+      const {data} = await api.get(url);
+      setMoviesGenre(data)
+  }
+  console.log("아이피검사",moviesGenre&&moviesGenre)
+
 
   const getMoviesDetail=async()=>{
     let url=(`/movie/${id}?api_key=${API_KEY}&language=en-US`)
@@ -38,6 +47,7 @@ const MovieDetail = ({item}) => {
   useEffect(()=>{
     // dispatch(movieAction.getMovies())
     getMoviesDetail();
+    getAPI();
   },[])
  
   if(loading){

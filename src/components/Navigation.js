@@ -27,7 +27,7 @@ const Navigation = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Link to='/movies' className='nav-item'>Movies</Link>
+            <Link to='/movies' className='nav-item'>View all</Link>
             <Link to='/search' className='nav-item'>Search</Link>
             
          

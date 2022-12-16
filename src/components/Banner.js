@@ -41,7 +41,7 @@ const Banner = ({movie}) => {
                       {width: "560",
                       height: "315",
                       playerVars: {
-                        autoplay: 0, //자동재생 O
+                        autoplay: 1, //자동재생=1 O
                       },
                     }
                     }

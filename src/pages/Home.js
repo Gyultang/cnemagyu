@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Banner from '../components/Banner'
 import MovieSlide from '../components/MovieSlide'
 import ClipLoader from "react-spinners/ClipLoader";
+import GenreMovie from '../components/GenreMovie'
 
 const Home = () => {
     const dispatch=useDispatch()
@@ -42,6 +43,10 @@ const Home = () => {
           <MovieSlide movies={upComingMovies}></MovieSlide>
         </div>
         
+        <div className='genre-movie'>
+          <h1 className='genre-how'>What about movies in these genres?</h1>
+          <GenreMovie></GenreMovie>
+        </div>
     </div>
   )
 }
