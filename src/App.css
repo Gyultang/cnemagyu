@@ -563,7 +563,7 @@ a{
   }
 
   .login-page h1{
-    font-size: 20px;
+    font-size: 21px;
   }
   .login::before{
     position: absolute;
@@ -580,7 +580,7 @@ a{
     flex-direction: column;
     padding: 0px 0px;
     width: 400px;
-    height: 2000px;
+    height: 2200px;
     flex-wrap: wrap;
     align-items: center;
   }
@@ -613,6 +613,9 @@ a{
   .Search-Banner h1{
     font-size: 25px;
     margin-top: 20px;
+  }
+  .search-view-box{
+    display: none;
   }
 
   /* 무비디테일페이지 */
